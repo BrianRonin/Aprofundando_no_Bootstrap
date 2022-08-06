@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="b">
+<!--
+                    
+    ESTILOS DE BOTÕES
+
+Voce aplica o estilo de botão com bootstrap usando "btn"
+
+Podem ser "outline" = contornado e active ou disabled
+
+É possivel aplicar o estilo de botões em links, input submit
+        
+        Pode alterar o tamanho do botão assim
+        
+        btn-sm   small
+        btn-md   medium
+        btn-lg   large
+        
+        Alterar a largura altura assim
+
+        w-100 = 100% width
+        h-100 = 100% height
+
+É possivel criar grupos de botões também em uma divisão
+
+    btn-group = grupo de botões na horizontal
+    btn-group-vertical = grupo de botões na vertical
+
+    Pode alterar o tamanho do grupo dos botões assim
+
+    btn-group-sm    small
+    btn-group-md    medium
+    btn-group-lg    large
+
+            ESTILOS
+-->
+    <button class="btn">Basic</button>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-outline-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-outline-secondary">Secondary</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-outline-success">Success</button>
+    <button class="btn btn-info">Info</button>
+    <button class="btn btn-outline-info">Info</button>
+    <button class="btn btn-warning">Warning</button>
+    <button class="btn btn-outline-warning">Warning</button>
+    <button class="btn btn-danger">Danger</button>
+    <button class="btn btn-outline-danger">Danger</button>
+    <button class="btn btn-dark">Dark</button>
+    <button class="btn btn-outline-dark">Dark</button>
+    <button class="btn btn-light">Light</button>
+    <button class="btn btn-link">Link</button>
+<!--
+        É POSSIVEL UTILIZAR NO LINK E INPUT SUBMIT
+-->
+    <input type="submit" class="btn btn-success" value="enviar">
+    <input type="submit" class="btn btn-outline-success" value="enviar">
+
+    <a class="btn btn-primary" href="#">Facebook</a>
+    <a class="btn btn-outline-primary" href="#">Facebook</a>
+
+</div>
+<div class="a">
+<!--
+                ATIVADO/DESATIVADO
+                
+                    W-100   WIDTH 100%
+        
+        btn-block faz a mesma coias que w-100 mas foi desativado no botstrap 5
+-->
+    <button class="btn btn-outline-primary w-100 btn-block">width 100%</button>
+    <button class="btn btn-outline-primary w-100 btn-block active">active</button>
+    <button class="btn btn-outline-primary w-100 btn-block disabled">disabled</button>
+    
+    <button class="btn btn-primary btn-sm">small</button>
+    <button class="btn btn-primary btn-md">Medium</button>
+    <button class="btn btn-primary btn-lg">Large</button>
+<!--
+        GRUPO DE BOTÕES
+-->
+    <div class="bt-group btn-group-lg">
+        <button type="button" class="btn btn-outline-primary">1</button>
+        <button type="button" class="btn btn-outline-primary">2</button>
+        <button type="button" class="btn btn-outline-primary">3</button>
+    </div>
+<!--
+        GRUPO DE BOTÕES NA VERTICAL
+-->
+    <div class="bt-group btn-group-vertical btn-group-lg">
+        <button type="button" class="btn btn-outline-primary">1</button>
+        <button type="button" class="btn btn-outline-primary">2</button>
+        <button type="button" class="btn btn-outline-primary">3</button>
+    </div>
+
+
+<!--
+/////////////// COLLAPSE ///////////////////////////////////////////////////////////////////////////////
+
+collapse utiliza pra esconder e mostrar algo apertando um botão ou link
+como uma imagem por exemplo
+
+collapse esconde o conteudo
+collapsing é aplicado durante as transições
+collapse/show mostra o conteudo
+
+//Pra utilizar voce usa
+data-toggle ou alternancia de data no botão ou link 
+data-toggle="collapse"
+e
+data-target ou data alvo
+data-target="#" então aqui voce vai colocar o id ou class daquilo que vai ocultar
+e aparecer ao apertar o botão ou link
+
+agora na imagem ou item que voce vai usar o collapse voce vai colocar class="collapse"
+e um id pra puxar no botao ou link com data-target
+
+
+caso não funcione utilize -bs- entreo meio dos dois comandos funcionou pra mim
+--> 
+
+<button href="https://getbootstrap.com/docs/5.0/components/collapse/" data-bs-toggle="collapse" data-bs-target=".imagem" 
+    class="btn btn-outline-dark w-100">COLLAPSE
+</button>
+
+<img id="imagem" class="collapse imagem" width="400px" src="https://miro.medium.com/max/1400/1*BkSZbpsL_cpdHfdcH43iZQ@2x.jpeg" alt="">
+<a class="collapse imagem btn btn-info" target="_blank" href="https://getbootstrap.com/docs/5.0/components/collapse/">bootstrap</a>
+<!--
+////////////// DropDown ////////////////////////////////////////////////////////////////////////////////////
+
+DropDown vai criar um menu um botão aonde voce clicka e abre uma gama de itens tendo muita variação
+tem
+
+dropdown
+dropup
+dropleft
+dropright
+
+
+
+
+é possivel fazer uma divisao nos itens colocando uma classe em uma div assim
+<div class="dropdown-divider"></div>
+
+
+e outra forma com letras usando dropdown-header
+
+tambem pode utilizar disabled/enabled etc
+-->
+
+<div class="dropdown">
+    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" >DropDown/Menu</button>
+
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Tirolesa</a>
+        <a class="dropdown-item" href="#">Trilha</a>
+        <a class="dropdown-item" href="#">Rafting</a>
+        <div class="dropdown-divider">links</div>
+        <a class="dropdown-item" target="_blank" href="https://getbootstrap.com/docs/4.0/components/dropdowns/">Bootstrap</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" >DropDown/Menu</button>
+<!--
+ou caso queira uma divisão com escrita basta usar na divisão uma classe
+dropdown-header
+-->
+    <div class="dropdown-menu">
+        <div class="dropdown-header">Outdor</div>                                                    <!-- 
+    é possivel dar um aspecto de link com dropdown-item-text
+    --> <a class="dropdown-item-text" href="#">Tirolesa</a>
+        <a class="dropdown-item disabled" href="#">Paraquedas</a>
+        <a class="dropdown-item active" href="#">Trilha</a>
+        <a class="dropdown-item" href="#">Rafting</a>
+        <div class="dropdown-header">links</div>
+        <a class="dropdown-item" target="_blank" href="https://getbootstrap.com/docs/4.0/components/dropdowns/">Bootstrap</a>
+    </div>
+</div>
+
+<!-- é possivel fazer separado assim o botao do botao dropdown-->
+
+<div class="btn-group">
+    
+    <button class="btn btn-dark">DropDown/Menu</button>
+    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" ></button>
+    
+    <div class="dropdown-menu">
+        <div class="dropdown-header">Outdor</div>                                                    
+        <a class="dropdown-item-text" href="#">Tirolesa</a>
+        <a class="dropdown-item disabled" href="#">Paraquedas</a>
+        <a class="dropdown-item active" href="#">Trilha</a>
+        <a class="dropdown-item" href="#">Rafting</a>
+        <div class="dropdown-header">links</div>
+        <a class="dropdown-item" target="_blank" href="https://getbootstrap.com/docs/4.0/components/dropdowns/">Bootstrap</a>
+    </div>
+</div>
+
+
+
+</div>
+<style>
+
+    .b{
+        display: grid;
+        grid-template: auto auto auto auto/ auto auto auto auto;
+        justify-content: center;
+        align-content: center;
+        gap: 30px;
+
+        height: 430px;
+        width: 100%;
+
+    }
+    .a{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin: 20px;
+
+
+        gap: 20px;
+        height: 1500px;
+    }
+
+</style>
+</body>
+</html>
